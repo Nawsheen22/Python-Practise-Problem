@@ -1,9 +1,29 @@
-cost=int (input("Enter the cost price for the bike:"))
+list_products = [
+    {
+        "name": "Hp Laptop",
+        "brand": "HP",
+        "price":1500000,
+        "configuration":{
+            "ram": "16GB",
+            "ssd":"512GB",
+        },
+        "color":["red","green","blue"]
 
-if cost>100000:
-    print("Tax:15%")
-elif cost >50000 and cost <=1000000 :
-    print("Tax:10%")   
+    },
+    {
+        "name": "Dell Laptop",
+        "brand": "Dell",
+        "price":1400000,
+        "configuration":{
+            "ram": "32GB",
+            "ssd":"1TB",
+        },
+        "color":["red","green","blue"]
 
-elif cost <=50000:
-    print("Tax:5%")    
+    }
+]
+
+for item in list_products:
+  print(item)
+  for color in item["color"]:
+    print(color)
